@@ -48,6 +48,19 @@ function findDelNumb2(mass) {
   return summFirstMas - summSecondMas;
 }
 
+// изящный способ 2
+function findDelNumb3(mass) {
+  let result = 0;
+  let N = mass.length + 1;
+  for (var j = 1 ; j <= N ; j++){
+    mass.push(j);
+    console.log(mass);
+  }
+  for (let i = 0 ; i < mass.length ; i++){
+     result ^= mass[i];  
+  }
+  return result;
+}
 
 var mass_numb = [2,1,4,5];
 console.log(findDelNumb2(mass_numb));
